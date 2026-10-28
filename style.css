@@ -1,235 +1,193 @@
+/* =========================================
+   1. БАЗОВЫЕ СТИЛИ (MOBILE FIRST)
+   ========================================= */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #222;
-    background: white;
+    background-color: #f9f9f9;
+    color: #000;
 }
 
-/* HEADER */
-
-header {
+/* Контейнер */
+.container {
     width: 100%;
-    background: #b8d4ee;
-    border-bottom: 2px solid #555;
-    padding: 20px;
-    text-align: center;
-}
-
-header div {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #555;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
-header h1 {
-    font-size: 24px;
-    margin: 15px 0;
+/* --- ШАПКА --- */
+header {
+    width: 100%;
+    background-color: #7fa6cc;
+    padding: 15px 0;
 }
 
-/* MENU */
-
-nav {
+/* На мобильном элементы шапки в столбик */
+.header-inner {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 5px;
-    margin-top: 15px;
+    align-items: center;
+    gap: 15px;
 }
 
-nav a {
-    display: block;
-    padding: 10px;
-    background: #8db9df;
-    border: 1px solid #555;
-    color: #222;
-    text-decoration: none;
+.logo {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a4c2db;
+    font-weight: bold;
+}
+
+.site-title {
+    font-size: 1.4rem;
     text-align: center;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* MAIN */
-
-main {
-    width: 100%;
+/* Меню на мобильном - вертикальный список (по заданию) */
+.menu {
     display: flex;
     flex-direction: column;
-    padding: 15px;
-}
-
-/* Порядок блоков на телефоне */
-
-#table {
-    order: 1;
-}
-
-#links {
-    order: 2;
-}
-
-#form {
-    order: 3;
-}
-
-section {
     width: 100%;
-    margin-bottom: 35px;
 }
 
-h2 {
-    color: #333;
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-/* LINKS */
-
-ul {
-    padding-left: 20px;
-    line-height: 1.8;
+/* --- ОСНОВНОЙ КОНТЕНТ --- */
+.main-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-/* TABLE */
+/* ОБЕРТКА ДЛЯ СМЕНЫ ПОРЯДКА (Задание 3) */
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* На мобильном элементы друг под другом */
+}
 
+/* Магия смены порядка: на телефоне таблица (order:1) выше списка (order:2) */
+.table-block {
+    order: 1;
+    margin-bottom: 30px;
+}
+
+.list-block {
+    order: 2;
+    margin-bottom: 30px;
+}
+
+.block h2 {
+    margin-bottom: 15px;
+}
+
+/* Таблица */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    font-size: 14px;
 }
 
-th,
-td {
-    border: 1px solid #555;
-    padding: 10px;
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 8px;
     text-align: center;
 }
 
 th {
-    background: #b8d4ee;
+    background-color: #7fa6cc;
 }
 
-tr:nth-child(even) {
-    background: #eeeeee;
+/* Чередование строк таблицы (как в задании 2) */
+tbody tr:nth-child(even) { background-color: #e0e0e0; }
+tbody tr:nth-child(odd) { background-color: #ffffff; }
+
+/* Картинка (карта ссылок) */
+.map-image {
+    max-width: 100%; /* Чтобы картинка не вылезала за экран телефона */
+    height: auto;
 }
 
-tr:nth-child(odd) {
-    background: white;
-}
-
-/* FORM */
-
+/* Форма на мобильном в столбик */
 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select, button {
     width: 100%;
-}
-
-form p {
-    margin-bottom: 20px;
-}
-
-input,
-select,
-textarea {
-    padding: 8px;
-    font-size: 16px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-select,
-textarea {
-    width: 100%;
-    margin-top: 5px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    padding: 10px 20px;
-    margin-right: 10px;
+    background-color: #7fa6cc;
+    font-weight: bold;
     cursor: pointer;
+    border: 1px solid #333;
 }
 
-/* FOOTER */
-
+/* Подвал */
 footer {
     width: 100%;
-    background: #b8d4ee;
-    padding: 30px;
+    background-color: #7fa6cc;
+    padding: 20px 0;
     text-align: center;
-    border-top: 2px solid #555;
+    margin-top: 40px;
 }
 
-/* ПЛАНШЕТЫ И КОМПЬЮТЕРЫ */
-
+/* =========================================
+   2. МЕДИА-ЗАПРОСЫ (DESKTOP & TABLET)
+   ========================================= */
 min-width: 768px {
-
-    header {
-        padding: 20px;
-    }
-
-    header div {
-        margin: 0;
-    }
-
-    header h1 {
-        margin-top: -55px;
-        margin-bottom: 35px;
-        font-size: 28px;
-    }
-
-    nav {
+    
+    /* Ограничиваем ширину контента (960px по заданию) */
+    .container {
         max-width: 960px;
-        margin: 20px auto 0;
+        padding: 0;
+    }
+
+    /* Шапка встает в ряд */
+    .header-inner {
         flex-direction: row;
-        justify-content: flex-end;
-        gap: 20px;
+        justify-content: space-between;
     }
 
-    nav a {
-        background: none;
-        border: none;
-        padding: 5px;
+    /* Меню встает в ряд */
+    .menu {
+        flex-direction: row;
+        width: auto;
     }
 
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 30px 20px;
+    .menu a {
+        border-bottom: none;
+        padding: 0 15px;
     }
 
-    /* На компьютере возвращаем обычный порядок */
-
-    #links {
+    /* Возвращаем нормальный порядок для ПК: список первый, таблица вторая */
+    .list-block {
         order: 1;
     }
-
-    #table {
+    .table-block {
         order: 2;
-    }
-
-    #form {
-        order: 3;
-    }
-
-    section {
-        margin-bottom: 50px;
-    }
-
-    table {
-        margin-top: 20px;
     }
 }
