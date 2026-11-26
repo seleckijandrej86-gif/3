@@ -10,184 +10,162 @@
 <body>
 
    <!-- Шапка -->
-
 <header id="header">
-
     <div class="container header-inner">
-
         <div class="logo">Лого</div>
-
         <h1 class="site-title">Мой учебный сайт</h1>
-
     </div>
 
     <!-- Главное меню -->
-
     <nav class="menu container">
-
         <a href="#links">Ссылка 1</a>
-
         <a href="#table">Ссылка 2</a>
-
         <a href="#form">Ссылка 3</a>
-
     </nav>
-
 </header>
 
     <!-- Основной контент -->
     <main id="content" class="container main-layout">
 
-        <!-- ОБЕРТКА ДЛЯ 3 ЗАДАНИЯ: нужна, чтобы менять порядок списка и 
+        <!-- Список гиперссылок -->
+        <section id="links" class="block list-block">
+            <h2>Список гиперссылок</h2>
 
-            <!-- Список гиперссылок -->
-            <section id="links" class="block list-block">
-                <h2>Список гиперссылок</h2>
+            <ul>
+                <li>
+                    <a href="http://kubsu.ru">Главная страница КУБГУ (HTTP)</a>
+                </li>
+                <li>
+                    <a href="https://kubsu.ru">Главная страница КУБГУ (HTTPS)</a>
+                </li>
+                <li>
+                    <a href="https://kubsu.ru">
+                        <img src="https://kubsu.ru/sites/default/files/logo.png" alt="Логотип КУБГУ" width="150">
+                    </a>
+                </li>
+                <li>
+                    <a href="/about.html">Внутренняя страница сайта</a>
+                </li>
+                <li>
+                    <a href="/">Главная страница сайта</a>
+                </li>
+                <li>
+                    <a href="#form">Перейти к форме</a>
+                </li>
+                <li>
+                    <a href="/search?name=Ivan&amp;age=20&amp;city=Krasnodar">Ссылка с тремя параметрами</a>
+                </li>
+                <li>
+                    <a href="/page?id=123">Страница с параметром id</a>
+                </li>
+                <li>
+                    <a href="page.html">Страница в текущем каталоге</a>
+                </li>
+                <li>
+                    <a href="about/page.html">Страница в каталоге about</a>
+                </li>
+                <li>
+                    <a href="../page.html">Страница уровнем выше</a>
+                </li>
+                <li>
+                    <a href="../../page.html">Страница двумя уровнями выше</a>
+                </li>
+                <li>
+                    <p>Узнать больше об университете можно на <a href="https://kubsu.ru">официальном сайте Кубанского государственного университета</a>.</p>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/ru/docs/Web/HTML#ссылки">Раздел о ссылках на MDN</a>
+                </li>
 
-                <ul>
-                    <li>
-                        <a href="http://kubsu.ru">Главная страница КУБГУ (HTTP)</a>
-                    </li>
-                    <li>
-                        <a href="https://kubsu.ru">Главная страница КУБГУ (HTTPS)</a>
-                    </li>
-                    <li>
-                        <a href="https://kubsu.ru">
-                            <img src="https://kubsu.ru/sites/default/files/logo.png" alt="Логотип КУБГУ" width="150">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about.html">Внутренняя страница сайта</a>
-                    </li>
-                    <li>
-                        <a href="/">Главная страница сайта</a>
-                    </li>
-                    <li>
-                        <a href="#form">Перейти к форме</a>
-                    </li>
-                    <li>
-                        <a href="/search?name=Ivan&amp;age=20&amp;city=Krasnodar">Ссылка с тремя параметрами</a>
-                    </li>
-                    <li>
-                        <a href="/page?id=123">Страница с параметром id</a>
-                    </li>
-                    <li>
-                        <a href="page.html">Страница в текущем каталоге</a>
-                    </li>
-                    <li>
-                        <a href="about/page.html">Страница в каталоге about</a>
-                    </li>
-                    <li>
-                        <a href="../page.html">Страница уровнем выше</a>
-                    </li>
-                    <li>
-                        <a href="../../page.html">Страница двумя уровнями выше</a>
-                    </li>
-                    <li>
-                        <p>Узнать больше об университете можно на <a href="https://kubsu.ru">официальном сайте Кубанского государственного университета</a>.</p>
-                    </li>
-                    <li>
-                        <a href="https://developer.mozilla.org/ru/docs/Web/HTML#ссылки">Раздел о ссылках на MDN</a>
-                    </li>
+                <!-- Карта изображений -->
+                <li>
+                    <p>КубГУ и Википедия:</p>
+                    <img 
+                        src="images.png" 
+                        alt="Логотипы КубГУ и Википедии" 
+                        width="1179" 
+                        height="592" 
+                        usemap="#logomap" 
+                        class="map-image"
+                    >
+                    <map name="logomap" id="logomap">
+                        <area shape="rect" coords="0,0,589,592" href="https://kubsu.ru/" alt="КубГУ" title="Перейти на сайт КубГУ" target="_blank">
+                        <area shape="circle" coords="885,296,190" href="https://ru.wikipedia.org/" alt="Википедия" title="Перейти в Википедию" target="_blank">
+                    </map>
+                </li>
 
-                    <!-- Карта изображений (исправлен синтаксис и координаты) -->
-                    <li>
-                        <p>КубГУ и Википедия:</p>
-                        <img 
-                            src="images.png" 
-                            alt="Логотипы КубГУ и Википедии" 
-                            width="1179" 
-                            height="592" 
-                            usemap="#logomap" 
-                            class="map-image"
-                        >
-                        <map name="logomap" id="logomap">
-                            <!-- Зона КубГУ -->
-                            <area shape="rect" coords="0,0,589,592" href="https://kubsu.ru/" alt="КубГУ" title="Перейти на сайт КубГУ" target="_blank">
-                            <!-- Зона Википедии -->
-                            <area shape="circle" coords="885,296,190" href="https://ru.wikipedia.org/" alt="Википедия" title="Перейти в Википедию
-КубГУ
-kubsu.ru
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://example.com" rel="nofollow">Ссылка с rel="nofollow"</a></li>
+                <li><a href="https://example.com" rel="noindex">Ссылка с rel="noindex"</a></li>
+                
+                <li>
+                    <p>Нумерованный список ссылок с подсказками title:</p>
+                    <ol>
+                        <li><a href="https://kubsu.ru" title="Официальный сайт Кубанского государственного университета">Сайт КУБГУ</a></li>
+                        <li><a href="https://developer.mozilla.org" title="Справочник по HTML, CSS и JavaScript">MDN Web Docs</a></li>
+                        <li><a href="https://html.spec.whatwg.org/" title="Официальная спецификация HTML">Спецификация HTML</a></li>
+                    </ol>
+                </li>
 
+                <li>
+                    <a href="ftp://username:password@ftp.example.com/file.txt">Файл на FTP-сервере</a>
+                </li>
+            </ul>
+        </section>
 
-target="_blank">
-                        </map>
-                    </li>
+        <!-- Таблица -->
+        <section id="table" class="block table-block">
+            <h2>Таблица</h2>
 
-                    <li><a href="">Ссылка с пустым href</a></li>
-                    <li><a>Ссылка без href</a></li>
-                    <li><a href="https://example.com" rel="nofollow">Ссылка с rel="nofollow"</a></li>
-                    <li><a href="https://example.com" rel="noindex">Ссылка с rel="noindex"</a></li>
-                    
-                    <li>
-                        <p>Нумерованный список ссылок с подсказками title:</p>
-                        <ol>
-                            <li><a href="https://kubsu.ru" title="Официальный сайт Кубанского государственного университета">Сайт КУБГУ</a></li>
-                            <li><a href="https://developer.mozilla.org" title="Справочник по HTML, CSS и JavaScript">MDN Web Docs</a></li>
-                            <li><a href="https://html.spec.whatwg.org/" title="Официальная спецификация HTML">Спецификация HTML</a></li>
-                        </ol>
-                    </li>
-
-                    <li>
-                        <a href="ftp://username:password@ftp.example.com/file.txt">Файл на FTP-сервере</a>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Таблица -->
-            <section id="table" class="block table-block">
-                <h2>Таблица</h2>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Имя</th>
-                            <th>Предмет</th>
-                            <th>Оценка</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Андрей</td>
-                            <td>HTML</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Иван</td>
-                            <td>CSS</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Мария</td>
-                            <td>HTML</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Елена</td>
-                            <td>CSS</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Сергей</td>
-                            <td>JavaScript</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>6</td> 
-                            <td colspan="2">Итоговая оценка группы</td>
-                            <td>4.6</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-        </div> <!-- Конец обертки content-wrapper -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Предмет</th>
+                        <th>Оценка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Андрей</td>
+                        <td>HTML</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Иван</td>
+                        <td>CSS</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Мария</td>
+                        <td>HTML</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Елена</td>
+                        <td>CSS</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Сергей</td>
+                        <td>JavaScript</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td> 
+                        <td colspan="2">Итоговая оценка группы</td>
+                        <td>4.6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
         <!-- Форма -->
         <section id="form" class="block form-block">
@@ -216,11 +194,7 @@ target="_blank">
                 </p>
 
                 <fieldset>
-КубГУ
-kubsu.ru
-
-
-<legend>Пол:</legend>
+                    <legend>Пол:</legend>
                     <label>
                         <input type="radio" name="gender" value="male" required> Мужской
                     </label>
@@ -276,4 +250,4 @@ kubsu.ru
     </footer>
 
 </body>
-</html>"
+</html>
